@@ -1,0 +1,63 @@
+<h1><i class="fa fa-newspaper-o"></i> Recent Messages</h1>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs tab-line">
+            <li ng-repeat="tab in vm.tabs"
+                ng-class="{'active':vm.isActiveTab($index)}">
+                <a href="#" ng-click="vm.setActiveTab($index)">{{tab}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<br>
+<div class="row" ng-if="!vm.news.length">
+    <div class="col-md-12">
+        <div class="alert alert-warning">
+            <i class="fa fa-info-circle"></i> Nothing yet.
+        </div>
+    </div>
+</div>
+<div class="row" ng-repeat="news in vm.news">
+    <div class="col-sm-2 hidden-sm hidden-xs">
+        <div class="user-avatar">
+            <img ng-src="resources/images/avatars/{{news.avatar}}">
+        </div>
+    </div>
+    <div class="col-sm-10" z-dropdown>
+        <div class="timeline">
+            <div class="timeline-head">
+                <span ng-if="vm.isStarred(news.id)"><i class="fa fa-star"></i></span>
+                <a>{{news.user}}</a> sent a {{news.type}}
+                <small class="pull-right">{{news.time}}</small>
+            </div>
+            <div ng-if="news.type!=='file'" class="timeline-content">
+                {{news.content}}
+            </div>
+            <div ng-if="news.type=='file'" class="timeline-content">
+                <i class="fa fa-paperclip"></i> <a>{{news.content}}</a>
+            </div>
+            <div class="timeline-foot">
+                <ul ng-if="!vm.isDeleted(news.id)">
+                    <li ng-if="vm.isStarred(news.id)">
+                        <a href="#!" ng-click="vm.removeFromStarred(news)"> Un-star</a>
+                    </li>
+                    <li ng-if="!vm.isStarred(news.id)">
+                        <a href="#!" ng-click="vm.addToStarred(news)"> Star</a>
+                    </li>
+                    <li ng-if="!vm.isDeleted(news.id)">
+                        <a href="#!" ng-click="vm.addToDeleted(news)"> Delete</a>
+                    </li>
+                </ul>
+                <ul  ng-if="vm.isDeleted(news.id)">
+                    <li>
+                        <a href="#!" ng-click="vm.removeFromDeleted(news)"> Restore</a>
+                    </li>
+                </ul>
+            </div>
+            <a z-dropdown-toggle href="#!">Reply</a>
+            <div z-dropdown-content>
+                <textarea></textarea>
+            </div>
+        </div>
+    </div>
+</div>

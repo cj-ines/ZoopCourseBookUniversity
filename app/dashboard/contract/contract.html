@@ -1,0 +1,28 @@
+<h1>Contracts</h1>
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-warning" ng-if="vm.contracts.legnth">
+            <i class="fa fa-info-circle"></i> Nothing yet.
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Document</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contract in vm.contracts">
+                    <td>{{contract.name}}</td>
+                    <td>{{contract.filename}}</td>
+                    <td>{{contract.date}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

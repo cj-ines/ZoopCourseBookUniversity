@@ -1,0 +1,46 @@
+<div class="container">
+    <ol class="breadcrumb">
+        <li class="active"><i class="fa fa-search"></i> Search results</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <ul class="list-group">
+                    <li class="list-group-item active"><span class="icon"><i class="fa fa-search"></i></span> All</li>
+                    <li class="list-group-item"><span class="icon"><i class="fa fa-book"></i></span> Courses</li>
+                    <li class="list-group-item"><span class="icon"><i class="fa fa-university"></i></span> Universities</li>
+                    <li class="list-group-item"><span class="icon"><i class="fa fa-male"></i></span> People</li>
+                    <li class="list-group-item"><span class="icon"><i class="fa fa-clock-o"></i></span> Recently viewed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div cbu-search-bar term="Environmental economics, fisheries">
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <h1><i class="fa fa-search"></i>
+                        84 results for "Environmental economics, fisheries
+                    </h1>
+                    <div class="card-item" ng-repeat="result in vm.results">
+                        <div class="card-head pull-left">
+                            <img ng-src="resources/images/avatars/{{result.avatar}}">
+                        </div>
+                        <div class="card-body">
+                            <h1><a href="#!">{{result.course}}</a></h1>
+                            <h2>{{result.teacher}},  {{result.title}} </h2>
+                            <h3>{{result.univerity}} </h3>
+                            <h3>{{result.country}} </h3>
+                            <div class="pull-right">
+                                This course have been taught {{result.noTaught}} time(s).
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
