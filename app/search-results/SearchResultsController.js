@@ -9,13 +9,13 @@
     function SearchResultsController($scope, $stateParams) {
         var vm = this;
         vm.test = "test";
-
+        console.log($stateParams);
         vm.results = [{
             teacher: "Teacher Name",
             title: "Title",
             avatar: "1002.png",
             course: "Name of Course",
-            univerity: "Univeristy",
+            univerity: "Univerisity",
             country: "Country",
             level: "Level",
             ects: "Points",

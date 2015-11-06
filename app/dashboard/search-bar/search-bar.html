@@ -4,7 +4,7 @@
             <div class="input-group-btn">
                 <button class="btn btn-lg btn-default btn-darker dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-bars"></i></button>
                 <ul class="dropdown-menu">
-                    <li><a ng-click="vm.setSelectedAll()">All </a></li>
+                    <li class="hidden"><a ng-click="vm.setSelectedAll()">All </a></li>
                     <li ng-repeat="filter in vm.filters">
                         <a ng-click="vm.toggleSelected(filter)">{{filter.label}}
                             <span class="pull-right" ng-if="filter.selected"><i class="fa fa-check"></i>

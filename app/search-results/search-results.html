@@ -22,19 +22,24 @@
                 </div>
                 <div class="panel-body">
                     <h1><i class="fa fa-search"></i>
-                        84 results for "Environmental economics, fisheries
+                        84 results for "Environmental economics, fisheries"
                     </h1>
                     <div class="card-item" ng-repeat="result in vm.results">
                         <div class="card-head pull-left">
                             <img ng-src="resources/images/avatars/{{result.avatar}}">
                         </div>
                         <div class="card-body">
-                            <h1><a href="#!">{{result.course}}</a></h1>
-                            <h2>{{result.teacher}},  {{result.title}} </h2>
+                            <div class="pull-right">
+                                <i class="fa fa-2x fa-star-o"></i>
+                            </div>
+                            <h1><a href="#!" ui-sref="profile">{{result.course}}</a></h1>
                             <h3>{{result.univerity}} </h3>
+                            <h2>{{result.teacher}},  {{result.title}} </h2>
                             <h3>{{result.country}} </h3>
                             <div class="pull-right">
-                                This course have been taught {{result.noTaught}} time(s).
+                                <h2>ECTS: {{result.ects}}</h2>
+                                <h2>Level: {{result.level}}</h2>
+                                <h3>This course have been taught {{result.noTaught}} time(s).</h3>
                             </div>
                         </div>
                         <div class="clearfix"></div>

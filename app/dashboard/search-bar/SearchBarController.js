@@ -12,7 +12,7 @@
             vm.filters = [{
                 icon: '',
                 label: 'Courses',
-                selected: false
+                selected: true
             }, {
                 icon: '',
                 label: 'People',

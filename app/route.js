@@ -16,6 +16,11 @@
                     url: '/search-results/:search',
                     templateUrl: 'app/search-results/search-results.html',
                     controller: 'SearchResultsController as vm'
+                })
+                .state('profile', {
+                    url: '/profile/:id',
+                    templateUrl: 'app/profile/profile.html',
+                    controller: 'ProfileController as vm'
                 });
         });
 })()
