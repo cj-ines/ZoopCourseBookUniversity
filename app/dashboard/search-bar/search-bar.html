@@ -2,7 +2,7 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-btn">
-                <button class="btn btn-lg btn-default btn-darker dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-bars"></i></button>
+                <button class="btn btn-default btn-darker dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-bars"></i></button>
                 <ul class="dropdown-menu">
                     <li class="hidden"><a ng-click="vm.setSelectedAll()">All </a></li>
                     <li ng-repeat="filter in vm.filters">
@@ -12,9 +12,9 @@
                     </li>
                 </ul>
             </div>
-            <input type="text" placeholder="Search Course" class="form-control input-lg" ng-model="term">
+            <input type="text" placeholder="Search Course" class="form-control" ng-model="term">
         </div>
-        <a class="btn btn-lg btn-primary" ui-sref="search-results"><i class="fa fa-search"></i></a>
+        <a class="btn btn-primary" ui-sref="search-results"><i class="fa fa-search"></i></a>
         &nbsp;<span>Advanced</span>
     </div>
     <div class="pull-right">
