@@ -22,10 +22,10 @@
 
 			vm.newsAll = [{
 				id: 307,
-				user: 'John Doe',
-				avatar: '3002.png',
+				user: 'Timothy O\'Higgins',
+				avatar: 'Timothy_Ohiggins.png',
 				type: 'message',
-				content: 'I guess it could be done in admin interface if we hide every page that could screw the system. But at this time admin interface is not even password protected.',
+				content: 'Ok, we have a deal. I\'ll upload the articles and other material for the course one of the coming days and look forward to meeting the students in October.',
 				time: '2 mins ago'
 			}, {
 				id: 301,
@@ -46,7 +46,7 @@
 				user: 'Jennifer Hawking',
 				avatar: '2003.jpg',
 				type: 'message',
-				content: 'This is a sample \'starred\' messsage.',
+				content: 'Transport costs will be handled by my own department so don\'t worry about that.',
 				time: '2 days ago'
 			}];
 

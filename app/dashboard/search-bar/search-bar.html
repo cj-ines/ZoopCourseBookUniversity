@@ -1,4 +1,4 @@
-<div class="form-inline">
+<!-- <div class="form-inline">
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-btn">
@@ -21,4 +21,31 @@
         <div><input type="checkbox" ng-checked="true"> Subjects</div>
         <div><input type="checkbox" ng-checked="true"> Topics</div>
     </div>
-</div>
+</div> -->
+
+<div class="row">
+  <div class="col-lg-7" style="margin-top: 7px;">
+    <div class="input-group">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default btn-darker dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars"></i></button>
+        <ul class="dropdown-menu">
+            <li class="hidden"><a ng-click="vm.setSelectedAll()">All </a></li>
+            <li ng-repeat="filter in vm.filters">
+                <a ng-click="vm.toggleSelected(filter)">{{filter.label}}
+                    <span class="pull-right" ng-if="filter.selected"><i class="fa fa-check"></i>
+                </a>
+            </li>
+        </ul>
+      </div><!-- /btn-group -->
+      <input type="text" class="form-control" ng-model="term" aria-label="Search Course">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-3" style="margin-top: 7px;">
+          <a class="btn btn-primary" ui-sref="search-results"><i class="fa fa-search"></i></a>
+        &nbsp; <a class="search-advanced">Advanced</a>
+  </div>
+  <div class="col-lg-2 checkboxes">
+    <div><input type="checkbox" ng-checked="true"> Subjects</div>
+    <div><input type="checkbox" ng-checked="true"> Topics</div>
+  </div>
+</div><!-- /.row -->

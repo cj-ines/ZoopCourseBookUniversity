@@ -11,22 +11,22 @@
         vm.test = "test";
         console.log($stateParams);
         vm.results = [{
-            teacher: "Teacher Name",
-            title: "Title",
-            avatar: "1002.png",
-            course: "Name of Course",
-            univerity: "Univerisity",
-            country: "Country",
-            level: "Level",
-            ects: "Points",
+            teacher: "Timothy O’Higgins",
+            title: "PhD, Ecology, Oceanography",
+            avatar: "Timothy_Ohiggins.png",
+            course: "Marine Ecosystem Based Management",
+            univerity: "University College Cork",
+            country: "Cork, Ireland",
+            level: "Master",
+            ects: "10",
             noTaught: "12"
         }, {
             teacher: "Leticia Reyes",
             title: "Professor",
-            avatar: "2002.jpg",
+            avatar: "2006.jpg",
             course: "Economics of Artic Fisheries",
             country: "United States",
-            univerity: "Univeristy Of Alaska",
+            univerity: "University Of Alaska",
             level: "Graduate",
             ects: "5",
             noTaught: "2"
